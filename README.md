@@ -14,24 +14,24 @@ This repository contains the implementation for Assignment 2, which covers:
 ```
 Assn 2/
 ├── B23CM1034-A2.ipynb      # Main implementation notebook (run this)
-├── B23CM1034_Report.md     # Detailed assignment report
+├── B23CM1034_Report.tex     # Detailed assignment report
 ├── README.md               # This file
 ├── data/
 │   ├── raw_corpus.txt      # Raw scraped text from IIT Jodhpur
 │   ├── clean_corpus.txt    # Preprocessed corpus
 │   └── TrainingNames.txt   # 1000 Indian names for RNN training
 ├── results/
-│   ├── wordcloud.png                    # Word cloud visualization
-│   ├── top_words_frequency.png          # Top 20 words bar chart
-│   ├── cbow_pca_visualization.png       # CBOW PCA projection
-│   ├── skipgram_pca_visualization.png   # Skip-gram PCA projection
-│   ├── cbow_tsne_visualization.png      # CBOW t-SNE projection
-│   ├── skipgram_tsne_visualization.png  # Skip-gram t-SNE projection
-│   ├── training_curves_and_params.png   # Model training curves
-│   ├── name_generation_metrics.csv      # Quantitative evaluation results
-│   ├── generated_name_samples.txt       # Generated name samples
-│   └── failure_modes.csv                # Failure mode analysis
-└── models/                 # Saved model checkpoints (optional)
+    ├── wordcloud.png                    # Word cloud visualization
+    ├── top_words_frequency.png          # Top 20 words bar chart
+    ├── cbow_pca_visualization.png       # CBOW PCA projection
+    ├── skipgram_pca_visualization.png   # Skip-gram PCA projection
+    ├── cbow_tsne_visualization.png      # CBOW t-SNE projection
+    ├── skipgram_tsne_visualization.png  # Skip-gram t-SNE projection
+    ├── training_curves_and_params.png   # Model training curves
+    ├── name_generation_metrics.csv      # Quantitative evaluation results
+    ├── generated_name_samples.txt       # Generated name samples
+    └── failure_modes.csv                # Failure mode analysis
+
 ```
 
 ---
@@ -75,12 +75,6 @@ pip install pypdf
    ```
 
 2. **Run all cells sequentially** (Kernel → Run All) or run cells one by one.
-
-3. **Expected runtime:**
-   - Web scraping (if data doesn't exist): ~5-10 minutes
-   - Word2Vec training: ~10-15 minutes
-   - RNN training: ~15-20 minutes
-   - Total: ~30-45 minutes (CPU)
 
 ### Option 2: Run Specific Sections
 
@@ -160,31 +154,6 @@ The following data files are included and will be loaded automatically:
 
 ---
 
-## Troubleshooting
-
-### Common Issues
-
-1. **CUDA not available:**
-   - The code automatically falls back to CPU if CUDA is unavailable
-   - No action needed; training will be slower
-
-2. **Memory errors:**
-   - Reduce `batch_size` in training functions
-   - Use `QUICK_MODE_RNN = True` for faster testing
-
-3. **Web scraping fails:**
-   - Use pre-existing `data/raw_corpus.txt`
-   - Check internet connectivity
-   - Some IIT Jodhpur pages may be temporarily unavailable
-
-4. **Missing module errors:**
-   - Ensure all dependencies are installed
-   - Run: `pip install <missing_module>`
-
-5. **PDF extraction not working:**
-   - Install pypdf: `pip install pypdf`
-   - If still failing, PDF extraction is skipped (not critical)
-
 ### Quick Mode
 
 For faster testing/debugging, set `QUICK_MODE_RNN = True` in the RNN training cell:
@@ -197,10 +166,15 @@ For faster testing/debugging, set `QUICK_MODE_RNN = True` in the RNN training ce
 
 ### Word Embeddings (Problem 1)
 
-| Model | Best Configuration | Final Loss |
-|-------|-------------------|------------|
-| CBOW | dim=150, window=5, lr=0.01 | ~5.67 |
-| Skip-gram | dim=150, window=5, neg=10, lr=0.01 | ~0.95 |
+| Model | Best Configuration | Final Loss | Parameters |
+|-------|-------------------|------------|------------|
+| CBOW | dim=200, window=5, lr=0.01 | 0.2596 | 1,950,063 |
+| Skip-gram | dim=100, window=2, neg=15, lr=0.001 | 0.2840 | 972,600 |
+
+**Dataset Statistics:**
+- Total Tokens: 70,637
+- Vocabulary Size: 4,863
+- Type-Token Ratio: 0.0688
 
 ### Name Generation (Problem 2)
 
@@ -210,19 +184,8 @@ For faster testing/debugging, set `QUICK_MODE_RNN = True` in the RNN training ce
 | Vanilla RNN | 60.4% | 100% | ~19,000 |
 | RNN with Attention | 53.0% | 100% | ~131,000 |
 
----
-
-## References
-
-1. Mikolov, T., et al. (2013). "Efficient Estimation of Word Representations in Vector Space"
-2. Mikolov, T., et al. (2013). "Distributed Representations of Words and Phrases"
-3. Hochreiter, S., & Schmidhuber, J. (1997). "Long Short-Term Memory"
-4. Bahdanau, D., et al. (2015). "Neural Machine Translation by Jointly Learning to Align and Translate"
+**Dataset Statistics:**
+- Total Names: 1,000
+- Character Vocabulary Size: 24 (21 unique characters + 3 special tokens)
 
 ---
-
-## Contact
-
-For questions about this assignment, contact:
-- Student ID: B23CM1034
-- Course: Natural Language Understanding (NLU)
