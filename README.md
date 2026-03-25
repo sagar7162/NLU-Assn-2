@@ -12,7 +12,6 @@ This repository contains the implementation for Assignment 2, which covers:
 ## Repository Structure
 
 ```
-Assn 2/
 ├── B23CM1034-A2.ipynb      # Main implementation notebook (run this)
 ├── B23CM1034_Report.tex     # Detailed assignment report
 ├── README.md               # This file
