@@ -1,8 +1,5 @@
 # NLU Assignment 2: Word Embeddings & Character-Level RNN
 
-**Student ID:** B23CM1034
-**Course:** Natural Language Understanding
-
 This repository contains the implementation for Assignment 2, which covers:
 - **Problem 1:** Learning Word Embeddings from IIT Jodhpur Data
 - **Problem 2:** Character-Level Name Generation Using RNN Variants
