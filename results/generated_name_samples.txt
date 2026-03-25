@@ -1,0 +1,84 @@
+Vanilla RNN
+-----------
+01. Sheayr
+02. Ramva
+03. Tanika
+04. Sanini
+05. Reeav
+06. Nirsa
+07. Sarraj
+08. Amajeet
+09. Kalindra
+10. Darya
+11. Praika
+12. Mukish
+13. Shina
+14. Samir
+15. Subdeep
+16. Tarans
+17. Sruen
+18. Dhian
+19. Sidra
+20. Prail
+21. Punpreet
+22. Tenav
+23. Dhira
+24. Aaden
+25. Sarav
+
+BiLSTM
+------
+01. Yoog
+02. Shiseep
+03. Gilul
+04. Paran
+05. Gamut
+06. Prub
+07. Nived
+08. Nivdiv
+09. Chir
+10. Gokubs
+11. Jeta
+12. Jyoggpr
+13. Guril
+14. Yoknd
+15. Ubbey
+16. Chait
+17. Subir
+18. Yukkansr
+19. Numish
+20. Dokiv
+21. Jyogo
+22. Yogiva
+23. Pruppr
+24. Ndump
+25. Nedprr
+
+RNN with Attention
+------------------
+01. Sheans
+02. Arula
+03. Aviesh
+04. Nisvaya
+05. Shrul
+06. Arum
+07. Kriali
+08. Vaivra
+09. Vinali
+10. Malika
+11. Mihesh
+12. Ramkish
+13. Meeraj
+14. Arit
+15. Dakum
+16. Mukendra
+17. Ashendra
+18. Lakni
+19. Ayuen
+20. Sheni
+21. Shajeet
+22. Varini
+23. Dhira
+24. Avira
+25. Divveer
+

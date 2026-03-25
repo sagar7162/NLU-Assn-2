@@ -1,0 +1,4 @@
+Model,Generated,Unique,Novelty Rate,Diversity
+BiLSTM,118,118,1.0,1.0
+Vanilla RNN,111,111,0.6036036036036037,1.0
+RNN with Attention,117,117,0.5299145299145299,1.0

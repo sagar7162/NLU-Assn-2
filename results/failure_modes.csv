@@ -1,0 +1,4 @@
+Model,Generated,RepeatRun>=3 (%),HasDoubleChar (%),NoVowel (%),OddSuffix (%),AvgLength
+Vanilla RNN,111,0.0,19.82,0.0,0.0,5.66
+BiLSTM,118,0.0,24.58,0.0,0.85,5.42
+RNN with Attention,117,0.0,15.38,0.0,0.0,5.78
